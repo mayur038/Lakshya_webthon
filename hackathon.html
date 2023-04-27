@@ -1,0 +1,262 @@
+<!-- https://source.unsplash.com/900x900/?nature -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=+, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>register Yourself</title>
+    <style>
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+header
+{
+    height: 12%;
+    width:100%;
+    background-color: #3F72AF;
+    overflow: hidden;
+}
+.logo
+{
+    margin: 1%;
+    width: 20%;
+    display: inline-block;
+}
+.logo p
+{
+    font-size: 35px;
+    color: white;
+    margin: 2%;
+    overflow: hidden;
+}
+.links
+{
+    margin: 2% auto;
+    width: 70%;
+    float: right;
+    display: inline-block;
+}
+.links a{
+    color: white;
+    text-decoration: none;
+    margin: 2%;
+}
+.main
+{
+    width: 100%;
+    height: 40%;
+    background: url();
+    background-size: cover;
+}
+.form
+{
+    height: auto;
+    width: 80%;
+
+}
+.form
+{
+    display: block;
+    margin: 2% auto;
+    
+}
+.form input{
+    width: 50%;
+    height: 40px;
+    border: none;
+    background: none;
+    border: 1px solid rgba(0, 0, 0, 0.566);
+    margin-bottom: 0;
+    margin-top: 0px;
+    display: block;
+}
+button{
+    width: 100Px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: #3F72AF;
+    color: white;
+    border: none;
+    outline: none;
+}
+.form a
+{
+    text-decoration: none;
+
+}
+footer
+{
+    width: 100%;
+    height: auto;
+}
+footer a
+{
+    display: block;
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+}
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+#clockdiv{
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+.counter
+{
+    text-align: center;
+}
+#clockdiv > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: #00BF96;
+    display: inline-block;
+}
+
+#clockdiv div span{
+    padding: 15px;
+    border-radius: 3px;
+    background: #00816A;
+    display: inline-block;
+}
+
+.text{
+    padding-top: 5px;
+    font-size: 16px;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <p>HACKATHON 2.0</p>
+        </div>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">Register</a>
+            <a href="#">Contact</a>
+            <a href="#">Help</a>
+        </div>
+    </header>
+    <section class="main">
+        <h1>SSIP hackathon Is on !</h1>
+        <p>Participate Now with your Team members and get test your self</p>
+    </section>
+    <section class="form">
+        <form action="" method="post" enctype="multipart/form-data">
+            <h1>Registration Form</h1>
+
+
+            <label for="">Email</label>
+            <input type="email" name="Email" placeholder="Email id." required>
+            <br>
+            <label for="">Phone</label>
+            <input type="tel" name="Email" placeholder="Email id." required>
+<br>
+            <label for="">Team Name</label>
+            <input type="text" name="Email" placeholder="team name" required>
+<br>
+            <label for="">City</label>
+            <input type="text" name="city" placeholder="city." required>
+<br>
+            <button name="register">Register Now</button>
+            <a href="#">Join as Member</a>
+        </form>
+    </section>
+    <section class="counter">
+      <div id="clockdiv">
+  <div>
+    <span class="days"></span>
+    <div class="text">Days</div>
+  </div>
+  <div>
+    <span class="hours"></span>
+    <div class="text">Hours</div>
+  </div>
+  <div>
+    <span class="minutes"></span>
+    <div class="text">Minutes</div>
+  </div>
+  <div>
+    <span class="seconds"></span>
+    <div class="text">Seconds</div>
+  </div>
+</div>
+</script>
+        
+
+    <footer>
+        <h4>Quick Links</h4>
+        <a href="#">home</a>
+        <a href="#">Join Team</a>
+        <a href="#">COntact</a>
+        <a href="#">Help</a>
+        <a href="#">contact</a>
+    </footer>
+</body>
+<script>
+    function getTimeRemaining(endtime) {
+  var t = Date.parse("June 31,2017") - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+    function countdown() {
+    time = parseInt(localStorage.time); //All variables in localstorage are strings
+    //Resets timer if cannot parse the localStorage.time variable or if the time is greater than 30 mins
+    if(isNaN(time) || time > (30*60)) {
+        alert("An error occured: time left variable is corrupted, resetting timer");
+        localStorage.time = 30*60; //30 mins in seconds
+        countdown();
+        return null;    
+    }
+    //Decrementing time and recalling the function in 1 second
+    time--;
+    localStorage.time = time;
+    setTimeout('countdown()', 1000);
+}
+  }
+</script>
+</html>
